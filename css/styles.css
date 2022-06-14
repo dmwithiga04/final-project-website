@@ -21,19 +21,28 @@ ul {
 
 /* Style rule for body and images */
 body {
-    background-image: linear-gradient(#27c4a9, #157e15);
+    background-image: linear-gradient(to right, #20a6cf, #3ccc48);
 }
 
 img {
-    max-width: 100%;
-    display: block;
+    width: 100%;
 }
 
-/* Styles for Mobile Layout */
+/* Styles for Mobile Layout as the: Note it is the default a layeout of
+the page if no media quarie is applied */
 
-/* Hide tablet-desktop content */
-.tablet-desktop {
-    display: none;
+iframe, video{
+    border-radius: 10px;
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+    width: 100%;
+    height: 280px;
+
+    /*to center the contents*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 /* Style rule for the header */
@@ -50,6 +59,8 @@ header {
 }
 
 /* Style rules for navigation area */
+
+
 nav ul {
     list-style-type: none;
     text-align: center;
@@ -71,29 +82,52 @@ nav li a {
     text-decoration: none;
 }
 
+nav li a:hover {
+    color: #24107c;
+    background-color: #3226d3;
+}
+
 
 
 /* Style rules for the main content  */
 main {
     display: block;
-    font-family: Georgia, "Times New Roman", sans-serif;
+    font-family: 'Cantarell', sans-serif;
     font-size: 1em;
+    color:#000000;
     padding: 1em;
-    background-color: #FFFFFF;
-    border-top: solid 0.2em #110934;
-    border-bottom: solid 0.2em #110934;
+}
+
+main h1 {
+    font-size: 4em;
+    text-decoration: underline dotted #04465a;
+}
+
+main h2 {
+    font-size: 2em;
+    text-decoration: underline dashed #33125e;
+    font-family: 'Syne Mono', monospace;
+    text-shadow: 2px 2px 8px #12c046;
 }
 
 
+a {
+    text-decoration: none;
+    color:rgb(16, 224, 27);
+}
+
+a:hover {
+    color: #065343;
+}
 /* Style rule for footer */
 footer {
-    font-size: .70em;
+    font-size: 1.2em;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 0em;
     background-color:rgb(12, 113, 160);
     color: rgb(255, 255, 255);
 
-    /*make it stay ay*/
+    /*make it stay centered*/
     display: inline-block;
     position: relative;
     width: 100%;
@@ -121,15 +155,28 @@ print {
         background-color: #e5e0fa;
     }
 
-    /* tablet-desktop */
-    .tablet-desktop {
-        display: block;
-
+    
+    iframe {
+        border-radius: 10px;
+        height: 500px;
+        width: 900px;
+        
     }
 
     /* Style rules for the main content  */
     main h1{
         text-align: center;
+    }
+    main h2 {
+        margin-top: 0;
+    }
+
+    .logo {
+        display: block;
+        float: left;
+        margin-top: 2%;
+        padding-left: 5%;
+        width: 100px;
     }
 
 }
@@ -156,31 +203,40 @@ print {
         color: #4424d6;
         background-color: #e5e0fa;
     }
+    
+    
 
     /* Desktop Viewport: Style rules for the main content */
     main {
         border-style: none;
-        margin-bottom: 1em 0;
+        margin-bottom: 1em ;
         overflow: auto;
+        /*hide x-axis scrollbar*/
+        overflow-x: hidden;
     }
 
-    .col-content {
-        width: 30%;
-        padding: 1.5%;
-        float: left;
+    main h2 {
+        margin-top: 0;
+        
     }
+
+    section {
+        width: 100%;
+        padding: 1%;
+
+    }
+
     /* Style rules for logo*/
     .logo {
         display: block;
         float: left;
-        padding-top: 1.5%;
         padding-left: 5%;
         width: 5%;
-        height: 20%;
+        height:100px;
     }
 
 
-    /* Desktop Viewport: Style rule for footer */
+    
     
 
     /*Media Query for Large Desktop Viewport*/
